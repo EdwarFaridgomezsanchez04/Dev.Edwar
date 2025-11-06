@@ -35,7 +35,18 @@ function Home() {
                 src={homeLogo}
                 alt="home pic"
                 className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                style={{ 
+                  maxHeight: "450px",
+                  transition: "all 0.5s ease",
+                  transformStyle: "preserve-3d",
+                  animation: "floatAnimation 3s ease-in-out infinite"
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "rotateY(15deg) rotateX(5deg) scale(1.1)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "rotateY(0deg) rotateX(0deg) scale(1)";
+                }}
               />
             </Col>
           </Row>

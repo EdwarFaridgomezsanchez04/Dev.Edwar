@@ -31,13 +31,23 @@ function ProjectCards(props) {
           <div style={{ textAlign: "center", marginTop: "10px" }}>
             <span
               style={{
-                backgroundColor: "#cd5ff8",
+                backgroundColor: "#4A90E2",
                 color: "white",
                 padding: "8px 20px",
                 borderRadius: "5px",
                 fontSize: "14px",
                 fontWeight: "bold",
-                display: "inline-block"
+                display: "inline-block",
+                transition: "all 0.3s ease",
+                transformStyle: "preserve-3d"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-3px) scale(1.05)";
+                e.currentTarget.style.boxShadow = "0 5px 15px rgba(74, 144, 226, 0.5)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
+                e.currentTarget.style.boxShadow = "none";
               }}
             >
               {props.status || "🚧 En Desarrollo"}

@@ -14,6 +14,9 @@ function Particle() {
               value_area: 1500,
             },
           },
+          color: {
+            value: "#4A90E2",
+          },
           line_linked: {
             enable: false,
             opacity: 0.03,
@@ -31,6 +34,7 @@ function Particle() {
               speed: 1,
               opacity_min: 0.05,
             },
+            value: 0.5,
           },
         },
         interactivity: {
@@ -39,10 +43,18 @@ function Particle() {
               enable: true,
               mode: "push",
             },
+            onhover: {
+              enable: true,
+              mode: "repulse",
+            },
           },
           modes: {
             push: {
               particles_nb: 1,
+            },
+            repulse: {
+              distance: 100,
+              duration: 0.4,
             },
           },
         },

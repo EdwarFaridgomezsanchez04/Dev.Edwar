@@ -62,12 +62,22 @@ function Home2() {
                 alt="Edwar Farid Gómez" 
                 style={{
                   borderRadius: "50%",
-                  boxShadow: "0 15px 35px rgba(0,0,0,0.4)",
-                  border: "4px solid #cd5ff8",
+                  boxShadow: "0 15px 35px rgba(30, 58, 95, 0.5)",
+                  border: "4px solid #4A90E2",
                   maxWidth: "300px",
                   width: "100%",
                   height: "auto",
-                  objectFit: "cover"
+                  objectFit: "cover",
+                  transition: "all 0.5s ease",
+                  transformStyle: "preserve-3d"
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "rotateY(10deg) scale(1.05)";
+                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(74, 144, 226, 0.6)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "rotateY(0deg) scale(1)";
+                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(30, 58, 95, 0.5)";
                 }}
               />
             </Tilt>

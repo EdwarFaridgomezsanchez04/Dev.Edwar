@@ -37,12 +37,22 @@ function About() {
               className="img-fluid" 
               style={{
                 borderRadius: "20px",
-                boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
-                border: "3px solid #cd5ff8",
+                boxShadow: "0 10px 30px rgba(30, 58, 95, 0.4)",
+                border: "3px solid #4A90E2",
                 maxWidth: "350px",
                 width: "100%",
                 height: "auto",
-                objectFit: "cover"
+                objectFit: "cover",
+                transition: "all 0.5s ease",
+                transformStyle: "preserve-3d"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "rotateY(-10deg) rotateX(5deg) scale(1.03)";
+                e.currentTarget.style.boxShadow = "0 15px 40px rgba(74, 144, 226, 0.6)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "rotateY(0deg) rotateX(0deg) scale(1)";
+                e.currentTarget.style.boxShadow = "0 10px 30px rgba(30, 58, 95, 0.4)";
               }}
             />
           </Col>
